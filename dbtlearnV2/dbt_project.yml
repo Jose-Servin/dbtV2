@@ -18,6 +18,7 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
+target-path: "target" # directory which store compiles SQL files
 clean-targets: # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
@@ -32,4 +33,6 @@ models:
   dbtlearnV2:
     +materialized: view
     dim:
-      +materialized: table
+      +materialized: view
+    src:
+      +materialized: ephemeral

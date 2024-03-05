@@ -39,3 +39,7 @@ models:
       +materialized: view
     src:
       +materialized: ephemeral
+
+# Define variables here
+vars:
+  user_name: JServin
